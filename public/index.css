@@ -1,0 +1,34 @@
+body{
+    margin:0 !important;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+    /* height:100vh; */
+    width: 100%;
+    overflow:hidden;
+    flex-direction: column;
+}
+.appComponent{
+    height: 100vh;
+}
+.theme{
+    margin-right: 3vw;
+}
+.theme span {
+    font-size: 14px;
+}
+@media (max-width:700px){
+.theme span{
+    font-size: 13px;
+}
+.switch{
+    font-size: 14px;
+} 
+.info{
+    font-size: 12px;
+}
+.theme{
+    margin-right: 3vw;
+}
+
+}

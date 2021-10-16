@@ -1,0 +1,39 @@
+.title{
+    font-size: 4.7rem;
+    font-weight:300;
+    text-transform: uppercase;
+}
+.headerComponent{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 45px;
+}
+TextField{
+    width: 100%;
+}
+@media (max-width:900px){
+    .headerComponent{
+        height: 22vh;
+        margin-top: 4vh;
+
+    }
+    .title{
+        font-size: 3rem;
+    }
+}
+.searchForAWord{
+    width: 100%;
+}
+@media (max-width:700px){
+    .title{
+        font-size: 2.7rem;
+    }
+    .headerComponent{
+        height: 20vh;
+        margin-top:50px;
+    }
+}
