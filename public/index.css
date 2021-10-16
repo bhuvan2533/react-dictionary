@@ -12,7 +12,7 @@ body{
     height: 100vh;
 }
 .theme{
-    margin-right: 3vw;
+    margin-right: 2vw;
 }
 .theme span {
     font-size: 14px;
@@ -28,7 +28,7 @@ body{
     font-size: 12px;
 }
 .theme{
-    margin-right: 3vw;
+    margin-right: 1vw;
 }
 
 }

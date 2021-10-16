@@ -1,8 +1,8 @@
 import React from "react";
 import "./Definition.css";
-import GraphicEqIcon from '@mui/icons-material/GraphicEq';
+import GraphicEqIcon from "@mui/icons-material/GraphicEq";
 
-const Definition = ({ word, meanings,lightMode }) => {
+const Definition = ({ word, meanings, lightMode }) => {
   function playAudio() {
     var audio = new Audio(
       meanings[0].phonetics[0] && meanings[0].phonetics[0].audio
@@ -11,17 +11,24 @@ const Definition = ({ word, meanings,lightMode }) => {
   }
   return (
     <section id="main-content">
-      <div className="meanings" style={{backgroundColor:lightMode? "#fff":"#282c43ab",transition:"all 0.2s linear",color:lightMode?"black":"white"}}>
+      <div
+        className="meanings"
+        style={{
+          backgroundColor: lightMode ? "#fff" : "#282c43ab",
+          transition: "all 0.1s linear",
+          color: lightMode ? "black" : "white",
+        }}
+      >
         <div className="audioElement">
           {meanings[0] && word && (
             <p className="phonetic">
-            Phonetic :
+              Phonetic :
               {meanings[0].phonetics[0] && meanings[0].phonetics[0].text}
             </p>
           )}
 
           {meanings[0] && word && (
-            <GraphicEqIcon className="pronunciation" onClick={playAudio}/>
+            <GraphicEqIcon className="pronunciation" onClick={playAudio} />
           )}
         </div>
         {!word ? (
@@ -32,7 +39,14 @@ const Definition = ({ word, meanings,lightMode }) => {
           meanings.map((mean) =>
             mean.meanings.map((item) =>
               item.definitions.map((def) => (
-                <div className="definitionLine" style={{backgroundColor:lightMode? "rgba(119, 109, 109, 0.142)":"rgba(0, 0, 0, 0.1)"}}>
+                <div
+                  className="definitionLine"
+                  style={{
+                    backgroundColor: lightMode
+                      ? "rgba(119, 109, 109, 0.142)"
+                      : "rgba(0, 0, 0, 0.1)",
+                  }}
+                >
                   <b>Definition : &nbsp;&nbsp;{def.definition}</b>
                   <hr />
                   {def.example && (
@@ -46,7 +60,7 @@ const Definition = ({ word, meanings,lightMode }) => {
                       <b>Synonyms :&nbsp;&nbsp;</b>
                       {def.synonyms.map((s) => `${s} , `)}
                     </span>
-                  ) }
+                  )}
                 </div>
               ))
             )

@@ -66,7 +66,7 @@ const App = () => {
           />
           {!lightMode ? <span>Dark</span> : <span>Light</span>}
         </div>
-        <HelpOutlineIcon style={infoStyling} className="info"></HelpOutlineIcon>
+        {/* <HelpOutlineIcon style={infoStyling} className="info"></HelpOutlineIcon> */}
       </div>
       <Container maxWidth="md" style={containerStyle}>
         <Header word={word} setWord={setWord} lightMode={lightMode}/>
